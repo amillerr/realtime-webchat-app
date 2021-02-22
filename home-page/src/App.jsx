@@ -15,7 +15,7 @@ const App = () => (
     </p>
     <h1 style={{
       paddingBottom: 30,
-    }}>Webchat App</h1>
+    }}>Realtime Webchat App</h1>
     <Chat />
     <p>
     </p>

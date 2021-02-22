@@ -89,7 +89,7 @@ const Messages = ({ user }) => {
 };
 
 const Chat = () => {
-  const [state, stateSet] = React.useState({
+  const [state, setState] = React.useState({
     user: "",
     content: "",
   });
@@ -101,7 +101,7 @@ const Chat = () => {
         variables: state,
       });
     }
-    stateSet({
+    setState({
       ...state,
       content: "",
     });
@@ -116,7 +116,7 @@ const Chat = () => {
             placeholder="Name"
             value={state.user}
             onChange={(evt) =>
-              stateSet({
+              setState({
                 ...state,
                 user: evt.target.value,
               })
@@ -129,7 +129,7 @@ const Chat = () => {
             placeholder="Your Message"
             value={state.content}
             onChange={(evt) =>
-              stateSet({
+              setState({
                 ...state,
                 content: evt.target.value,
               })
